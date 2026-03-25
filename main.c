@@ -1,3 +1,9 @@
+/*
+A função conta_pares tem um loop que internamente chama outro loop,
+isso faz com que a função seja O(n²).
+
+O código é inteiramente O(n²)
+*/
 #include <stdio.h>
 
 int conta_pares(int n, int mat[][n]) {
