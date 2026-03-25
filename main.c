@@ -1,8 +1,22 @@
+/*
+A função conta_pares tem um loop que internamente chama outro loop,
+isso faz com que a função seja O(n²).
+
+O código é inteiramente O(n²)
+*/
 #include <stdio.h>
 
 int conta_pares(int n, int mat[][n]) {
-    /* TODO: Implemente esta função.
-     * Para verificar se um número é par, use a expressão (x % 2 == 0) */
+    int aux = 0;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j <= i; j++){
+            if(mat[i][j]%2 == 0)
+            {
+                aux++;
+            }
+        }
+    }
+    return aux;
 }
 
 int main() {
